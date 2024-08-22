@@ -1,0 +1,25 @@
+
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Delete Tasks in your Project</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data">
+<form (ngSubmit)="DeleteTask()">
+    <div class="user">
+    <h1>Delete Task</h1>
+    <label>Enter Project Id</label>
+     <select id="projectId" name="projectId" [(ngModel)]="selectedProjectId" (change)="loadTasks()" >
+              <option value="" disabled>Select Project</option>
+              <option *ngFor="let project of projects" [value]="project.project_id">{{ project.project_id }}</option>
+            </select>
+    <br>
+    <br>
+    <label>Enter Task Id</label>
+   <select id="taskId" [(ngModel)]="selectedTaskId" [ngModelOptions]="{ standalone: true }">
+            <option value="" disabled>Select Task</option>
+            <option *ngFor="let task of tasks" [value]="task.task_id">{{ task.name }}</option>
+    </select>
+    <br>
+    <p *ngIf="isDeleted">Task is Deleted successfully</p>
+    <button class="user-button" type="submit">Confirm</button>
+    </div>
+</form>

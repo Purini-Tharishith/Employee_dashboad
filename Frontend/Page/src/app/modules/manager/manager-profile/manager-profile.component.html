@@ -1,0 +1,85 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Profile</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data">
+
+<div *ngIf="userProfile; else profileForm" class="card">
+  <h2 class="profile-title">Your Profile</h2>
+  <fa-icon [icon]="user" class="icon"></fa-icon>
+
+  <div class="profile-info">
+    <div class="profile-row">
+      <span class="label">Gender:</span>
+      <span class="value">{{ userProfile.gender }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="label">Email:</span>
+      <span class="value">{{ userEmail }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="label">Department:</span>
+      <span class="value">{{ userProfile.department_name }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="label">Phone Number:</span>
+      <span class="value">{{ userProfile.phone_no }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="label">Address:</span>
+      <span class="value">{{ userProfile.address }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="label">Skills:</span>
+      <ul class="skills-list">
+        <li *ngFor="let skill of skills">{{ skill }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #profileForm>
+  <!-- Display profile form -->
+  <div class="card">
+      <h2 class="text-center">Create your profile</h2>
+      <p class="text-success" *ngIf="success">Your profile is created</p>
+      <p class="text-danger" *ngIf="!profileCreated">Profile is not created please try again</p>
+  <form (ngSubmit)=" $event.preventDefault();onSubmit()">
+      <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="profile.phone_no" required>
+      </div>
+      <div>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" [(ngModel)]="profile.address" required></textarea>
+      </div>
+      <div>
+        <label for="department">Department:</label>
+        <select id="department" name="department" [(ngModel)]="profile.department_name" required>
+          <option value="">Select Department</option>
+          <option value="Engineering">Engineering</option>
+          <option value="IT">IT</option>
+          <option value="HR">HR</option>
+          <option value="Finance">Finance</option>
+          <option value="Marketing">Marketing</option>
+          <!-- Add more department options as needed -->
+        </select>
+      </div>
+      <div>
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" [(ngModel)]="profile.gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" [(ngModel)]="profile.gender" value="female"> Female</label>
+        <!-- Add more gender options as needed -->
+      </div>
+      <div>
+        <label>Skills:</label>
+        <div class="skills">
+          <input type="text" name="skills" [(ngModel)]="skill" required>
+          <button type="button" (click)="addSkill()">Add Skill</button>
+      </div>
+      <small class="text-muted">You added {{this.intSet.size}} Skills to your profile</small>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</ng-template>

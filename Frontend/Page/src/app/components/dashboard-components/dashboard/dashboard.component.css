@@ -1,0 +1,31 @@
+.page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+  }
+  
+  .page__box {
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+  
+  .page__content {
+    min-height: calc(100vh - 178px);
+    
+    margin-top: -2rem;
+    background: white;
+    color: black;
+  }
+  
+  .row{
+     width : 1000px;
+     height: auto;
+     margin-left: 600px;
+  }
+  h2{
+    display: "flex";
+    justify-content: "center"; 
+    align-items: center;
+  }

@@ -1,0 +1,53 @@
+<div class="conatiner">
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <h1>Create a Employee</h1>
+    <div class="name-content">
+      <label>
+      <input type="text" formControlName="firstName" placeholder="FirstName">
+      </label>
+    
+      <label>
+      <input type="text" formControlName="lastName" placeholder="LastName">
+      </label>
+    </div>
+    <small *ngIf="f['firstName'].invalid && (f['firstName'].dirty || f['firstName'].touched)" class="error-message">
+      <small *ngIf="f['firstName'].invalid">First Name is required</small>
+    </small>
+    <div>
+      <label>
+      <input type="email" formControlName="email" placeholder="Email">
+      </label>
+      <small *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)" class="error-message">
+        <small *ngIf="f['email'].invalid">Email is required</small>
+      </small>
+    </div>
+  
+    <div>
+      <label>
+      <input type="password" formControlName="password"placeholder="Password">
+      </label>
+      <small *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)">
+        <small *ngIf="f['password'].invalid">Password is required</small>
+      </small>
+    </div>
+  
+    <div>
+      <label>Role:</label>
+      <select formControlName="role">
+        <option value="">Select Role</option>
+        <option value="ADMIN">ADMIN</option>
+        <option value="Manager">Manager</option>
+        <option value="USER">USER</option>
+      </select>
+      <small *ngIf="f['role'].invalid && (f['role'].dirty || f['role'].touched)">
+        <small *ngIf="f['role'].invalid">Role is required</small>
+      </small>
+     </div>
+     <div *ngIf="showMessage">
+      <h3>{{ currentRole }} is Created Successfully</h3>
+    </div>
+    <button type="submit" [disabled]="registerForm.invalid">submit</button>
+  </form>
+</div>
+  

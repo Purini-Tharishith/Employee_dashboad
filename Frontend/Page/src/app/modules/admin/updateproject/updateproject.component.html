@@ -1,0 +1,48 @@
+<div class="container">
+  <form [formGroup]="projectForm" (ngSubmit)="$event.preventDefault(); onSubmit()">
+      <div class="task-container">
+      <h2>Create Project</h2>
+      <div class="form-group">
+        <label for="DepartmentName">Department Name</label>
+        <select id="DepartmentName" formControlName="departmentName">
+          <option  value="Engineering">Engineering</option>
+          <option  value="IT Services">IT Services</option>
+          <option  value="HR">HR</option>
+          <option  value="Consulting">Consulting</option>
+          <option  value="Marketing">Marketing</option>
+        </select>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+      
+  
+      <div class="form-group1">
+        <label for="status">Status:</label>
+        <select id="status" formControlName="status">
+          <option  value="ON_HOLD">ON_HOLD</option>
+          <option  value="IN_PROGRESS">IN_PROGRESS</option>
+          <option  value="completed">COMPLETED</option>
+        </select>
+        <label for="assignedTo">Assigned To:</label>
+        <input type="text" id="assignedTo" formControlName="assignedTo">
+      </div>
+  
+      
+      
+      <div class="form-group">
+        <label for="assignDate">Assign Date:</label>
+        <input type="date" id="assignDate" formControlName="assignDate">
+        <label for="completionDate">Completion Date:</label>
+        <input type="date" id="completionDate" formControlName="completionDate">
+      </div>
+     
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" formControlName="description">
+       
+      </div>
+      <p *ngIf="isCreated">Task is created successfully</p>
+      <button type="submit" >Submit</button>
+    </div>
+    </form>
+  </div>

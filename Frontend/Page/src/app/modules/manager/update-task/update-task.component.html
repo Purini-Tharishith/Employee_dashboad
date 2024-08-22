@@ -1,0 +1,87 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Update your Work</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data">
+<div class="update-task">
+  <div class="container">
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <div class="task-container">
+        <h2>Update Task</h2>
+        <div class="form-group">
+          <label for="projectId">Project ID:</label>
+          <select id="projectId" name="projectId" formControlName="projectId" (change)="loadTasks()" >
+            <option value="" disabled>Select Project</option>
+            <option *ngFor="let project of projects" [value]="project.project_id">{{ project.project_id }}</option>
+          </select>
+          <label for="name">Name:</label>
+          <input type="text" id="name" formControlName="name">
+        </div>
+  
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <select id="status" formControlName="status">
+            <option value="ON_HOLD">ON_HOLD</option>
+            <option value="IN_PROGRESS">IN_PROGRESS</option>
+            <option value="COMPLETED">COMPLETED</option>
+          </select>
+          <label for="assignedTo">Assigned To:</label>
+          <select id="assignedTo" formControlName="assignedTo">
+            <option value="" disabled>Select Users</option>
+            <option *ngFor="let user of allEmployee" [value]="user.email">{{ user.email }}</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="assignDate">Assign Date:</label>
+          <input type="date" id="assignDate" formControlName="assignDate">
+          <label for="completionDate">Completion Date:</label>
+          <input type="date" id="completionDate" formControlName="completionDate">
+        </div>
+  
+        <div class="form-group">
+          <label for="taskId">Task ID:</label>
+          <select id="taskId" formControlName="taskId">
+            <option value="" disabled>Select Task</option>
+            <option *ngFor="let task of tasks" [value]="task.task_id">{{ task.task_id }}</option>
+          </select>
+        </div>
+        <p *ngIf="isCreated">Task is Updated successfully</p>
+        <button type="submit">Submit</button>
+   
+      </div>
+    </form>
+  </div>
+  
+    
+
+    <div>
+      <div class="status-form">
+      <form [formGroup]="projectForm" (ngSubmit)="updateProjectStatus()">
+        <h3>Project Status</h3>
+        <div class="form-container">
+          <div class="task-id">
+          <label for="taskId">Project ID:</label>
+          <select id="project_id" name="project_id" formControlName="project_id">
+            <option value="" disabled>Select Project</option>
+            <option *ngFor="let project of projects" [value]="project.project_id">{{ project.project_id }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="status">Status:</label>
+          <select id="status" name="status" formControlName="projectStatus">
+            <option value="COMPLETED">COMPLETED</option>
+            <option value="IN_PROGRESS">IN PROGRESS</option>
+            <option value="ON_HOLD">ON HOLD</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <p *ngIf="isProjectStatus"> Project status is updated successfully</p>
+        <button type="submit" class="btn-class">Update</button>
+      </form>
+      </div>
+    </div>
+
+    </div>
+ 
+

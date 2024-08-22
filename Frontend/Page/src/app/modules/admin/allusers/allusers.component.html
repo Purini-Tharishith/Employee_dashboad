@@ -1,0 +1,30 @@
+
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">All Users</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data">
+        <h2>All users</h2>
+        <table>
+            <thead>
+                <tr>
+                  <th>User ID</th>
+                  <th>First Name</th>
+                  <th>lastName</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of allUsers">
+                  <td>{{ user.user_id }}</td>
+                  <td>{{ user.firstName }}</td>
+                  <td>{{ user.lastName }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.authority}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+        <!-- src\app\modules -->

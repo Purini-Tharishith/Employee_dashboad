@@ -1,0 +1,27 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Update your Work</div>
+  <div class="page__content shadow p-3 position-relative">
+    <form (ngSubmit)="updateTaskStatus()">
+      <div class="user">
+      <h1>Update Task Status</h1>
+      <label>Enter Task Id</label>
+      <select id="taskId" [(ngModel)]="selectedTaskId" [ngModelOptions]="{standalone: true}">
+        <option value="" disabled>Select Task</option>
+        <option *ngFor="let task of projectData?.tasks" [value]="task?.task_id">{{ task?.task_id }}</option>
+</select>
+      <br>
+      <div>
+        <label for="status">Status:</label>
+        <select id="status" name="status" [(ngModel)]="taskStatus">
+          <option value="COMPLETED">COMPLETED</option>
+          <option value="IN_PROGRESS">IN PROGRESS</option>
+          <option value="ON_HOLD">ON HOLD</option>
+        </select>
+      </div>
+      <br>
+      <p *ngIf="isUpdated">Task is Updated successfully</p>
+      <br>
+      <button class="user-button" type="submit" [disabled]="tasksLength <= 0">Confirm</button>
+      </div>
+  </form>
+</div>

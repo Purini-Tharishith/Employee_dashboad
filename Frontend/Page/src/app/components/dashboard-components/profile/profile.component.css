@@ -1,0 +1,142 @@
+/* .card{
+  width:500px;
+  padding:10px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:2rem;
+  margin-left: 300px;
+} */
+
+.card{
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.icon {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  font-size: 16px;
+}
+
+.profile-row {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin-left: 20px;
+}
+
+.skills-list li:before {
+  content: "\2022";
+  color: #007bff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+
+
+
+/* profile-form.component.css */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+div {
+  margin-bottom: 5px;
+}
+label {
+  display: block;
+  font-weight: bold;
+}
+.skills{
+  display:flex;
+  justify-content:space-between 10px;
+}
+.skills>input{
+  width:200px;
+  margin:4px;
+  height:30px;
+}
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+button {
+  height:30px;
+  width:80px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin:4px;
+}
+button:hover {
+  background-color: #0056B3;
+}
+button[type="submit"] {
+  padding: 5px 10px;
+  margin-left: 100px;
+  background-color: #28A745;
+}
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+}
+
+.page__box {
+  min-height: 120px;
+  background: #1e293b;
+  margin: 0 -1rem;
+  font-size: 36px;
+}
+
+.page__content {
+  min-height: calc(100vh - 178px);
+  
+  margin-top: -2rem;
+  background: white;
+  color: black;
+}

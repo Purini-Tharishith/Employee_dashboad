@@ -1,0 +1,47 @@
+<div *ngIf="tasksLength == 0 else showTasks">
+  <div class="container-fluid page" >
+    <div class="d-flex page__box p-3 mt-2">Dashboard</div>
+    <div class="page__content shadow p-3 ">
+      <div class="page__content-data ">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <h2>No Tasks are Present</h2>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+ 
+ <ng-template #showTasks> 
+   <div class="container-fluid page">
+        <div class="d-flex page__box p-3 mt-2">Tasks</div>
+        <div class="page__content shadow p-3 position-relative">
+          <div class="page__content-data">
+           <table class="main-data">
+            <thead>
+              <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Status</th>
+                <th>Assigned To</th>
+                <th>Assigned By</th>
+                <th>Assigned Date</th>
+                <th>Completion Date</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of projectData?.tasks">
+                    <td>{{ task?.task_id }}</td>
+                    <td>{{ task?.name }}</td>
+                    <td>{{ task?.status }}</td>
+                    <td>{{ task?.assignedTo }}</td>
+                    <td>{{ task?.assignedBy }}</td>
+                    <td>{{ task?.assignedDate }}</td>
+                    <td>{{ task?.completionDate }}</td>
+                </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </ng-template> 
+    

@@ -1,0 +1,93 @@
+
+.conatiner2{
+    width: 630px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 30px;
+    margin-left: 250px;
+    height: 400px;
+    margin-top: 100px;
+    box-shadow: 5px 5px 10px 10px #b7c9d4;
+}
+.register-content{
+    box-sizing: border-box;
+    width: 475px;
+    margin-left: 70px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.form-elements{
+    margin: 20px;
+    border-radius: 5px;
+    height: 20px;
+}
+
+input{
+    border: 1px  solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form-elements ::placeholder{
+    padding: 15px 10px 0px;
+}
+#sign-up-board{
+    margin-left: 240px;
+    margin-top: 20px;
+}
+.form-btn{
+  background-color: #45a049;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: #45a049;
+  border-radius: 5px;
+  color: white;
+  width: 425px;
+  height: 33px;
+}
+#my-Checkbox{
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.check-login{
+    margin-left: 88px;
+}
+.check-login a{
+    text-decoration: none;
+}
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+small{
+    font-size: smaller;
+    font-weight: medium;
+    color: red;
+}
+.name-class{
+    margin-left: 35px;
+}
+p{
+    margin-left: 150px;
+    color: rgb(6, 88, 14);
+}
+.page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+  }
+  
+  .page__box {
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+  
+  .page__content {
+    min-height: calc(100vh - 178px);
+    
+    margin-top: -2rem;
+    background: white;
+    color: black;
+  }

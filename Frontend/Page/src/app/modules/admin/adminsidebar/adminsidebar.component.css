@@ -1,0 +1,28 @@
+nav-items{
+    padding-top:40px
+  }
+  .nav-item{
+    padding:25px 50px;
+    cursor:pointer;
+    margin-top: 30px;
+  }
+  .nav-item:hover{
+    background-color: rgb(1, 38, 69);
+  }
+  fa-icon {
+    margin-right: 20px;
+    font-size: 22px;
+    color: white;
+  }
+  .company-logo{
+    margin: 10px;
+  }
+  .mat-divider{
+    border-top-width: 2px;
+    border-color: white;
+    margin-top: 51px;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }

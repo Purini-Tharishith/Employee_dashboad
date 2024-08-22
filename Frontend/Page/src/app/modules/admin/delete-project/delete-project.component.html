@@ -1,0 +1,68 @@
+<div *ngIf="projectlength==0; else showProject">
+   <h2>No Projects are Created</h2>
+</div>
+<ng-template #showProject>
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Projects</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data">
+  <div class="project-list">
+     <h1>Total Projects</h1>
+      <ul>
+        <li *ngFor="let project of projects" (click)="selectProject(project)">
+          {{ project.name }}
+        </li>
+      </ul>
+    </div>
+    
+    <div class="project-details" *ngIf="selectedProject">
+      <h2>Project Details</h2>
+      <table>
+        <tr>
+          <th>Project ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Department Name</th>
+          <th>Status</th>
+          <th>Assigned To</th>
+          <th>AssignedDate</th>
+          <th>Completion Date</th>
+        </tr>
+        <tr>
+          <td>{{ selectedProject.project_id }}</td>
+          <td>{{ selectedProject.name }}</td>
+          <td>{{ selectedProject.description }}</td>
+          <td>{{selectedProject.department_name}}</td>
+          <td>{{ selectedProject.status }}</td>
+          <td>{{selectedProject.assignedTo}}</td>
+          <td>{{selectedProject.assignedDate}}</td>
+          <td>{{selectedProject.completionDate}}</td>
+        </tr>
+      </table>
+    
+      <h2>Tasks</h2>
+      <table>
+        <tr>
+          <th>Task ID</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Assigned To</th>
+          <th>AssignedDate</th>
+          <th>Completion Date</th>
+        </tr>
+        <tr *ngFor="let task of selectedProject.tasks">
+          <td>{{ task.task_id }}</td>
+          <td>{{ task.name }}</td>
+          <td>{{task.status}}</td>
+          <td>{{task.assignedTo}}</td>
+          <td>{{task.assignedDate}}</td>
+          <td>{{task.completionDate}}</td>
+        </tr>
+      </table>
+    </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+    
+

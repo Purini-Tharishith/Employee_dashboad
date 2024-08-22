@@ -1,0 +1,85 @@
+.delete-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-right: 10px; /* Adjust the margin-right value to add space between the label and the input */
+}
+
+.user {
+  background-color: #f0f0f0;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 200px;
+}
+
+.user h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user label {
+  font-weight: bold;
+}
+
+.user input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Adjust select styles */
+.user select {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Ensure select elements take full width */
+}
+
+.user-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-button:hover {
+  background-color: #0056b3;
+}
+
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+}
+
+.page__box {
+  min-height: 120px;
+  background: #1e293b;
+  margin: 0 -1rem;
+  font-size: 36px;
+}
+
+.page__content {
+  min-height: calc(100vh - 178px);
+  border-radius: 10px;
+  margin-top: -2rem;
+  background: white;
+  color: black;
+  height: 100%;
+}
+
+p {
+  color: green;
+  margin-left: 20px;
+}

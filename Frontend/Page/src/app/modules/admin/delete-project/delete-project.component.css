@@ -1,0 +1,83 @@
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+}
+
+.page__box {
+  min-height: 120px;
+  background: #1e293b;
+  margin: 0 -1rem;
+  font-size: 36px;
+}
+
+.page__content {
+  min-height: calc(100vh - 178px);
+  border-radius: 10px;
+  margin-top: -2rem;
+  background: white;
+  color: black;
+  height: 100%;
+}
+button{
+   background-color: green;
+   margin-left: 900px;
+   width: 75px;
+   height: 40px;
+   color: white;
+   border: 1px solid green;
+   border-radius: 5px;
+}
+.project-list {
+    float: left;
+    width: 30%;
+    padding: 20px;
+  }
+
+  /* Style for project details */
+  .project-details {
+    float: right;
+    width: 70%;
+    padding: 20px;
+  }
+
+  /* Style for project list items */
+  .project-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-list li {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+
+  .project-list li:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Style for tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+ 

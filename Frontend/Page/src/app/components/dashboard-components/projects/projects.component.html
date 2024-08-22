@@ -1,0 +1,38 @@
+
+    <div class="container-fluid page">
+        <div class="d-flex page__box p-3 mt-2">Projects</div>
+        <div class="page__content shadow p-3 position-relative">
+          <div class="page__content-data">
+           <table class="main-data">
+            <thead>
+              <tr>
+                <th>Project ID</th>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Department Name</th>
+                <th>Assigned By</th>
+                <th>Assigned To</th>
+                <th>Assigned Date</th>
+                <th>Completion Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{projectData?.project_id}}</td>
+                <td>{{ projectData?.name }}</td>
+                <td>{{ projectData?.description }}</td>
+                <td>{{ projectData?.status }}</td>
+                <td>{{ projectData?.department_name }}</td>
+                <td>{{ projectData?.assignedBy}}</td>
+                <td>{{ projectData?.assignedTo }}</td>
+                <td>{{ projectData?.assignedDate}}</td>
+                <td>{{ projectData?.completionDate}}</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+    

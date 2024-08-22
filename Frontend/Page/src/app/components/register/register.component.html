@@ -1,0 +1,49 @@
+<div class="register-contianer">
+    <div class="conatiner2">
+   <h1 id="sign-up-board">Sign Up</h1>
+   <h3 *ngIf="CheckRegister">User Registered Successfully</h3>
+   <h3  class="error-text" *ngIf="!CheckRegister && OnClickedButton">Email Exists Already</h3>
+   <form [formGroup]="reactiveForm"  (ngSubmit)="OnFormSubmit()">
+      <div class="register-content">
+      <label class="form-elements">
+        <input type="text" placeholder="First Name*" formControlName="firstName"/>
+        <label class="name-class">
+        <input type="text" placeholder="Last Name" formControlName="lastName"/>
+        </label>
+        <small *ngIf="reactiveForm.get('firstName').invalid&& reactiveForm.get('firstName').touched">
+          *FirstName is required filed
+        </small>
+      </label>
+  
+      <label class="form-elements">
+        <input type="text" placeholder="email*" size="51px" formControlName="email"/>
+        <small *ngIf="reactiveForm.get('email').invalid&& reactiveForm.get('email').touched">
+          *email is required filed
+        </small>
+
+      </label>
+
+  
+
+      <label class="form-elements">
+        <input type="password" placeholder="password*" id="password" size="51px" formControlName="password"/>
+        <small *ngIf="reactiveForm.get('password').invalid&& reactiveForm.get('password').touched">
+          *password is required filed
+        </small>
+      </label>
+
+     
+      <br>
+        <input type="checkbox" id="my-Checkbox" name="Checkbox"><label for="Checkbox">Remember me</label>
+      <br>
+      <label>
+        <button type="submit" class="form-btn" [disabled]="reactiveForm.invalid">Register</button>
+      </label>
+     </div>
+   </form>
+
+   <div class="check-login">
+    <p>Are you already a member ? <a routerLink="../login">login</a></p>
+   </div>
+</div>
+</div>
